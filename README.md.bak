@@ -1,10 +1,7 @@
 ### Проект с обучения по React школы IT-Incubator
 
 Проект представляет собой интернет магазин, выполненный на React.\
-Разработка производилась на OS Linux (Kubuntu 20.04.1)\
-
-### `Перед запуском`\
-необходимо установить `npm install axios react-router-dom`
+Разработка производилась на OS Linux (Kubuntu 20.04.1)
 
 
 # Getting Started with Create React App
