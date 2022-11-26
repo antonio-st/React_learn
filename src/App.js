@@ -1,13 +1,37 @@
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
+
+
 import React, { Component } from 'react';
 import './App.css';
-import { Header } from './Header'
-import { BestSellers } from './BestSellers'
+import { Header } from './Header';
+import { BestSellers } from './BestSellers';
+import { Product } from './Product'
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <BestSellers />,
+  },
+  {
+    path: 'products',
+    element: <Product />,
+  },
+
+
+
+]);
+
 
 function App() {
   return (
     <div className='appContainer'>
       <Header />
-      <BestSellers />
+      <hr className="divider" />
+      <RouterProvider router={router} />
     </div>
   );
 }
