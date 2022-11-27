@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import {useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import cartWhite from './assets/img/cartWhite.svg';
 import rating from './assets/img/rating.svg';
+import arrow from './assets/img/arrowBack.svg';
 
 export const Product = () => {
 
     const [product, setProduct] = useState(null)
     let { productId } = useParams();
-    debugger
 
     useEffect(() => {
         let promise = axios.get(`https://masterclass.kimitsu.it-incubator.ru/api/products/${productId}`)
@@ -19,7 +19,13 @@ export const Product = () => {
 
     return (
         <div>
-            <div>Заглушка. Понадобится чуть позже. Не удаляейте :)</div>
+          {/* Вставляем вместо заглушки */}
+            <div className="arrowBack">
+                <Link to={"/"}>
+                    <img src={arrow} alt="" />
+                    Back to Best Seller
+                </Link>
+            </div>
 
             {
                 product === null
